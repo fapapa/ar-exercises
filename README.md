@@ -74,9 +74,11 @@ You can work with the models with irb by running
 
 ### Exercise 2: Update the first store
 
-1. Load the first store (with `id = 1`) from the database and assign it to an instance variable `@store1`.
-2. Load the second store from the database and assign it to `@store2`.
-3. Update the first store (`@store1`) instance in the database. (Change its name or something.)
+1. Load the first store (with `id = 1`) from the database and assign it to an
+   instance variable `@store1`.
+1. Load the second store from the database and assign it to `@store2`.
+1. Update the first store (`@store1`) instance in the database. (Change its name
+   or something.)
 
 ### Exercise 3: Delete the third store
 
