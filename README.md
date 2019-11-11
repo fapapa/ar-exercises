@@ -5,38 +5,56 @@
 You'll find that this project has two Active Record "models" (classes):
 
 1. Store
-2. Employee
+1. Employee
 
-This means that there is a `stores` table and an `employees` table in the database that it is using. Since we are using an ORM, we just use the two ruby classes and their instances to manage (CRUD) that data.
+This means that there is a `stores` table and an `employees` table in the
+database that it is using. Since we are using an ORM, we just use the two ruby
+classes and their instances to manage (CRUD) that data.
 
-We'll be modifying this database via Active Record only. The `setup.rb` file already defines the database structure so you _don't need_ to create anything in the database using SQL manually.
+We'll be modifying this database via Active Record only. The `setup.rb` file
+already defines the database structure so you _don't need_ to create anything in
+the database using SQL manually.
 
-That said, feel free to connect to your Postgres database using `psql` or pgAdmin so that you can see what's in the database.
+That said, feel free to connect to your Postgres database using `psql` or
+pgAdmin so that you can see what's in the database.
 
 ## Instructions
 
 ### Setup
 
-1. Create a new Postgres database. Use `psql postgres` to connect to the database server. Use `create database ar_exercises;` to create the database.
-2. Take a look at the `establish_connection` method call in `setup.rb`. This will allow Active Record to connect to *your* Postgres database. If you are using vagrant, you should not need to make any changes here.
-3. Run `bundle install` to install the gems.
-4. Run the first exercise file to make sure the database connection is working: `ruby exercises/exercise_1.rb`. It should just output "Exercise 1" at the end, since you don't yet have any code in there.
+1. Create a new Postgres database. Use `psql postgres` to connect to the
+   database server. Use `create database ar_exercises;` to create the database.
+1. Take a look at the `establish_connection` method call in `setup.rb`. This
+   will allow Active Record to connect to *your* Postgres database. If you are
+   using vagrant, you should not need to make any changes here.
+1. Run `bundle install` to install the gems.
+1. Run the first exercise file to make sure the database connection is working:
+   `ruby exercises/exercise_1.rb`. It should just output "Exercise 1" at the
+   end, since you don't yet have any code in there.
 
 ### Running Exercises
 
-Complete the exercises by modifying the appropriate `exercises/exercise_*.rb` file and run the exercise using the `ruby` command.
+Complete the exercises by modifying the appropriate `exercises/exercise_*.rb`
+file and run the exercise using the `ruby` command.
 
 Example:
 
     ruby exercises/exercise_1.rb
 
-Follow the instructions to work on the exercises within the `exercises` folder. Each exercise is to be completed in it's appropriate file.
+Follow the instructions to work on the exercises within the `exercises`
+folder. Each exercise is to be completed in it's appropriate file.
 
 **IMPORTANT:**
 
-* Remember to `git commit` (and `git push`) at logical steps, like at the end of every exercise.
-* You do not need to / should not comment out your code in each exercise as you move on to the next one. The exercises in this assignment are meant to build on and continue from the previous ones. That's why you see them requiring the previous ones.
-* The setup ruby script actually drops and recreates the db tables with every run of the exercise. This is of course not practical in most real apps, because the data is usually meant to stay long term.
+* Remember to `git commit` (and `git push`) at logical steps, like at the end of
+  every exercise.
+* You do not need to / should not comment out your code in each exercise as you
+  move on to the next one. The exercises in this assignment are meant to build
+  on and continue from the previous ones. That's why you see them requiring the
+  previous ones.
+* The setup ruby script actually drops and recreates the db tables with every
+  run of the exercise. This is of course not practical in most real apps,
+  because the data is usually meant to stay long term.
 
 You can work with the models with irb by running
 
@@ -46,11 +64,13 @@ You can work with the models with irb by running
 
 ### Exercise 1: Create 3 stores
 
-1. Use Active Record's `create` class method multiple times to create 3 stores in the database:
+1. Use Active Record's `create` class method multiple times to create 3 stores
+   in the database:
   * Burnaby (annual_revenue of 300000, carries men's and women's apparel)
   * Richmond (annual_revenue of 1260000 carries women's apparel only)
   * Gastown (annual_revenue of 190000 carries men's apparel only)
-2. Output (`puts`) the number of the stores using ActiveRecord's `count` method, to ensure that there are three stores in the database.
+1. Output (`puts`) the number of the stores using ActiveRecord's `count` method,
+   to ensure that there are three stores in the database.
 
 ### Exercise 2: Update the first store
 
