@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Employee < ActiveRecord::Base
+  belongs_to :store
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :hourly_rate,
@@ -10,5 +12,13 @@ class Employee < ActiveRecord::Base
             }
   validates :store, presence: true
 
-  belongs_to :store
+  before_create :set_password
+
+  private
+
+  def set_password
+    puts "Hello from set_password"
+    charset = Array('A'..'Z') + Array('a'..'z')
+    self.password = Array.new(8) { charset.sample }.join
+  end
 end
